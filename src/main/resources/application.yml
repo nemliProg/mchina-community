@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      username: codipster
+      password: codipster
+      database: mchina
+      host: localhost
+      port: 27017
+      authentication-database: admin
