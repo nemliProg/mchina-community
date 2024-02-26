@@ -3,19 +3,17 @@ package com.codipster.mchinacommunity.service.imp;
 import com.codipster.mchinacommunity.mongodocs.Role;
 import com.codipster.mchinacommunity.repository.RoleRepository;
 import com.codipster.mchinacommunity.service.RoleService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class RoleServiceImp implements RoleService {
 
     private final RoleRepository roleRepository;
-
-    public RoleServiceImp(RoleRepository roleRepository) {
-        this.roleRepository = roleRepository;
-    }
 
     @Override
     public Role saveRole(String roleName) {

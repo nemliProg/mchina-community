@@ -4,19 +4,17 @@ import com.codipster.mchinacommunity.mongodocs.Role;
 import com.codipster.mchinacommunity.mongodocs.User;
 import com.codipster.mchinacommunity.repository.UserRepository;
 import com.codipster.mchinacommunity.service.UserService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class UserServiceImp implements UserService {
 
         private final UserRepository userRepository;
-
-        public UserServiceImp(UserRepository userRepository) {
-            this.userRepository = userRepository;
-        }
 
         @Override
         public User saveUser(User user) {
