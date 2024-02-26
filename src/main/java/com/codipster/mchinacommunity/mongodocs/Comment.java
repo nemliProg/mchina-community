@@ -1,7 +1,5 @@
 package com.codipster.mchinacommunity.mongodocs;
 
-import com.codipster.mchinacommunity.mongodocs.embedded.post.Image;
-import com.codipster.mchinacommunity.mongodocs.embedded.post.Link;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,17 +13,16 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @Builder
-@Document(collection = "posts")
-public class Post {
+@Document(collection = "comments")
+public class Comment {
     @Id
     private String id;
-    private String title;
-    private String textContent;
+    private String text;
     private Date createdAt;
     @DBRef
     private User user;
-    private List<Image> images;
-    private List<Link> links;
-    private List<String> hashtags;
-
+    @DBRef
+    private Post post;
+    @DBRef
+    private Comment parentComment;
 }
