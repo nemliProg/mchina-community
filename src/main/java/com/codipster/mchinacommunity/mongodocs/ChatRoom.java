@@ -9,10 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collection = "roles")
-public class Role {
+@Document(collection = "chatrooms")
+public class ChatRoom {
+
     @Id
     private String id;
-    private String roleName;
-
+    private String chatId;
+    private String senderId;
+    private String recipientId;
 }

@@ -1,11 +1,11 @@
 package com.codipster.mchinacommunity.mongodocs.embedded.post;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class Image {
     private String imageId;

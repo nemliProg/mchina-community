@@ -2,9 +2,7 @@ package com.codipster.mchinacommunity.mongodocs;
 
 import com.codipster.mchinacommunity.mongodocs.embedded.post.Image;
 import com.codipster.mchinacommunity.mongodocs.embedded.post.Link;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,8 +10,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Document(collection = "posts")
 public class Post {
