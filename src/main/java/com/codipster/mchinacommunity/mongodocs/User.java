@@ -1,9 +1,9 @@
 package com.codipster.mchinacommunity.mongodocs;
 
+import com.codipster.mchinacommunity.enums.Roles;
 import com.codipster.mchinacommunity.enums.Status;
 import lombok.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
@@ -17,10 +17,7 @@ public class User {
     private String username;
     private String email;
     private String password;
-
     private Status status;
-
-    @DBRef
-    private Role role;
+    private Roles role;
 
 }

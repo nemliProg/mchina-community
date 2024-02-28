@@ -5,13 +5,14 @@ import com.codipster.mchinacommunity.mongodocs.Post;
 import com.codipster.mchinacommunity.repository.LikeRepository;
 import com.codipster.mchinacommunity.service.LikeService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class LikeServiceImp implements LikeService {
 
     private final LikeRepository likeRepository;

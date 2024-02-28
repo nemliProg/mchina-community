@@ -5,13 +5,14 @@ import com.codipster.mchinacommunity.mongodocs.Like;
 import com.codipster.mchinacommunity.repository.CommentRepository;
 import com.codipster.mchinacommunity.service.CommentService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CommentServiceImp implements CommentService {
 
     private final CommentRepository commentRepository;
