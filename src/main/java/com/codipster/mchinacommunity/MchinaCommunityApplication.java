@@ -1,5 +1,6 @@
 package com.codipster.mchinacommunity;
 
+import com.codipster.mchinacommunity.enums.Roles;
 import com.codipster.mchinacommunity.mongodocs.*;
 import com.codipster.mchinacommunity.mongodocs.embedded.post.Image;
 import com.codipster.mchinacommunity.mongodocs.embedded.post.Link;
@@ -25,12 +26,8 @@ public class MchinaCommunityApplication {
 	public CommandLineRunner init(RoleRepository roleRepository, UserRepository userRepository, LikeRepository likeRepository, CommentRepository commentRepository, PostRepository postRepository) {
 		return (args) -> {
 			// add some test data
-			// add role
-			roleRepository.save(Role.builder().roleName("ROLE_USER").build());
-			// add users with attributes everything (username, password, email, role)
-			Role role = roleRepository.findByRoleName("ROLE_USER").orElse(null);
-			User user1 = User.builder().username("user1").password("password").email("user1@gmail.com").role(role).build();
-			User user2 = User.builder().username("user2").password("password").email("user2@gmail.com").role(role).build();
+			User user1 = User.builder().username("user1").password("password").email("user1@gmail.com").role(Roles.USER).build();
+			User user2 = User.builder().username("user2").password("password").email("user2@gmail.com").role(Roles.USER).build();
 			userRepository.saveAll(List.of(user1, user2));
 			// add posts with attributes everything (title, content, user, images, links, hashtags)
 			// get user
